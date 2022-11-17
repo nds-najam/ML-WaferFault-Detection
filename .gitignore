@@ -133,4 +133,7 @@ dmypy.json
 env/
 
 # vscode
-./vscode/*
+.vscode/*
+
+# zip files
+*.zip
