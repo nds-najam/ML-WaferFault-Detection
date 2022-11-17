@@ -2,6 +2,6 @@ artifacts_root: artifacts
 
 data_ingestion:
    root_dir: artifacts/data_ingestion
-   source_URL: https://www.kaggle.com/datasets/himanshunayal/waferdataset/download?datasetVersionNumber=1
-   local_data_file: artifacts/data_ingestion/archive.zip
+   source_URL: himanshunayal/waferdataset
+   local_data_file: artifacts/data_ingestion/waferdataset.zip
    unzip_dir: artifacts/data_ingestion
