@@ -137,3 +137,6 @@ env/
 
 # zip files
 *.zip
+
+# artifact files
+artifacts/*
