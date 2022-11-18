@@ -2,3 +2,4 @@ from pathlib import Path
 
 CONFIG_FILE_PATH = Path("configs/config.yaml")
 PARAMS_FILE_PATH = Path("params.yaml")
+KAGGLE_JSON_PATH = Path(r"C:\Users\Najam\.kaggle\kaggle.json")

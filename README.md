@@ -14,15 +14,15 @@ Steps:
 - Data Ingestion:
     - data for batch training
     - data validation
-        - check if file name is in correct format
-        - create a temp bad data folder and good data folder and move the validated files into the corresponding folder
         - create a schema json file for training and prediction
             - sample file name "wafer_ddmmyyyy_hhmmss.csv"
             - length of date stamp in file name = 8
             - length of time stamp in file name = 6
             - number of columns = 592
-            - column names and data types
-        - regex creation with file name syntax, validate the file name and move the files to corresponding good and bad folders
+            - column names and data types according to schema
+        - regex creation with file name syntax and compare against schema
+        - compare the length of date stamp and time stamp against schema
+        - compare the columns of file against the schema
         - check if file contains all the columnns, else move to the good/bad folders
         
     - data transformation

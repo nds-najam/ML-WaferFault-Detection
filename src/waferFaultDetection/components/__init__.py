@@ -1,0 +1,1 @@
+from waferFaultDetection.components.data_ingestion import DataIngestion

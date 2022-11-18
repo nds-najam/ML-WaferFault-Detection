@@ -1,0 +1,1 @@
+from waferFaultDetection.config.configuration import ConfigurationManager
