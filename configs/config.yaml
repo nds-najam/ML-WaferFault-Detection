@@ -5,3 +5,5 @@ data_ingestion:
    source_URL: himanshunayal/waferdataset
    local_data_file: artifacts/data_ingestion/waferdataset.zip
    unzip_dir: artifacts/data_ingestion
+   model_input_file: artifacts/data_ingestion/model_input_file.csv
+

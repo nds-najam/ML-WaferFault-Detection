@@ -24,6 +24,7 @@ Steps:
         - compare the length of date stamp and time stamp against schema
         - compare the columns of file against the schema
         - check if file contains all the columnns, else move to the good/bad folders
+        - check if any column contains only null values and move to bad files folder
         
     - data transformation
         - check for missing values in all columns, replace NaN with 'NULL' 

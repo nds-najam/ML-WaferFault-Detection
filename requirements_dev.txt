@@ -12,6 +12,9 @@ joblib
 types-PyYAML
 scipy
 mlflow==1.26.1
+zipfile36
+shutil
+re
 -e .
 
 ## Dev requirements
