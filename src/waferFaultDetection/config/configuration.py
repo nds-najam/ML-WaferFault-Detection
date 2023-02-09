@@ -2,6 +2,7 @@ from waferFaultDetection.constants import *
 from waferFaultDetection.utils import read_yaml,create_directories
 from waferFaultDetection import logger
 from waferFaultDetection.entity import DataIngestionConfig
+from waferFaultDetection.entity import DataPreprocessingConfig
 
 
 class ConfigurationManager:
@@ -33,3 +34,22 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+    def get_data_preprocessing_config(self) -> DataPreprocessingConfig:
+        config = self.config.data_preprocessing
+        logger.info("creating data preprocessing root directory")
+        create_directories([config.root_dir])
+
+        logger.info('creating data preprocessing configuration')
+        data_preprocessing_config = DataPreprocessingConfig(
+            root_dir = config.root_dir,
+            model_input_file = config.model_input_file,
+            sensor_name_column = config.sensor_name_column,
+            label_column_name = config.label_column_name,
+            null_summary_file = config.null_summary_file,
+            zero_stddev_columns_file = config.zero_stddev_columns_file,
+            preprocessed_model_input_file = config.preprocessed_model_input_file,
+            elbow_plot_file = config.elbow_plot_file,
+            kmeans_model_file = config.kmeans_model_file
+        )
+        return data_preprocessing_config

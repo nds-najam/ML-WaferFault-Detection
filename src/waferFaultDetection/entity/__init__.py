@@ -1,1 +1,2 @@
 from waferFaultDetection.entity.config_entity import DataIngestionConfig
+from waferFaultDetection.entity.config_entity import DataPreprocessingConfig

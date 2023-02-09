@@ -7,3 +7,13 @@ data_ingestion:
    unzip_dir: artifacts/data_ingestion
    model_input_file: artifacts/data_ingestion/model_input_file.csv
 
+data_preprocessing:
+   root_dir: artifacts/data_preprocessing
+   model_input_file: artifacts/data_ingestion/model_input_file.csv
+   sensor_name_column: Wafer
+   label_column_name: Good/Bad
+   null_summary_file: artifacts/data_preprocessing/null_columns_summary.csv
+   zero_stddev_columns_file: artifacts/data_preprocessing/zero_stddev_columns_file.csv
+   preprocessed_model_input_file: artifacts/data_preprocessing/preprocessed_model_input_file.csv
+   elbow_plot_file: artifacts/data_preprocessing/kmeans_elbow_plot.png
+   kmeans_model_file: artifacts/data_preprocessing/kmeans_model_file.sav
