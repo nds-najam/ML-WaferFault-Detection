@@ -3,6 +3,7 @@ from waferFaultDetection.utils import read_yaml,create_directories
 from waferFaultDetection import logger
 from waferFaultDetection.entity import DataIngestionConfig
 from waferFaultDetection.entity import DataPreprocessingConfig
+from waferFaultDetection.entity import ModelTrainingConfig
 
 
 class ConfigurationManager:
@@ -53,3 +54,18 @@ class ConfigurationManager:
             kmeans_model_file = config.kmeans_model_file
         )
         return data_preprocessing_config
+
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        logger.info("creating model training root directory")
+        create_directories([config.root_dir])
+
+        logger.info('creating model training configuration')
+        model_training_config = ModelTrainingConfig(
+            root_dir = config.root_dir,
+            preprocessed_model_input_file = config.preprocessed_model_input_file,
+            cluster_label = config.cluster_label,
+            label_column_name = config.label_column_name,
+            models_directory = config.models_directory
+        )
+        return model_training_config

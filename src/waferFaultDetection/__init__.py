@@ -1,10 +1,15 @@
 import os
 import sys
 import logging
+from datetime import datetime
 
 logging_str = "[%(asctime)s: %(levelname)s: %(module)s]: %(message)s"
 log_dir = "logs"
-log_filepath = os.path.join(log_dir, "running_logs.log")
+dt = datetime.now()
+dt_str = dt.strftime("%y%m%d_%H%M%S")
+log_file = 'log_'+dt_str+'.txt'
+
+log_filepath = os.path.join(log_dir,log_file)
 os.makedirs(log_dir, exist_ok=True)
 
 logging.basicConfig(
@@ -12,7 +17,7 @@ logging.basicConfig(
     format=logging_str,
     handlers=[
         logging.FileHandler(log_filepath),
-        logging.StreamHandler(sys.stdout),
+        logging.StreamHandler(sys.stdout)
     ])
 
 logger = logging.getLogger("waferFaultDetectionLogger")

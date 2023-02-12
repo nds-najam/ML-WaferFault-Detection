@@ -140,3 +140,6 @@ env/
 
 # artifact files
 artifacts/*
+
+# logs
+logs/*

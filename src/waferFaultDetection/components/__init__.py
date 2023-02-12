@@ -1,2 +1,3 @@
 from waferFaultDetection.components.data_ingestion import DataIngestion
 from waferFaultDetection.components.data_preprocessing import Preprocessor
+from waferFaultDetection.components.model_training import ModelTrainer

@@ -17,3 +17,10 @@ data_preprocessing:
    preprocessed_model_input_file: artifacts/data_preprocessing/preprocessed_model_input_file.csv
    elbow_plot_file: artifacts/data_preprocessing/kmeans_elbow_plot.png
    kmeans_model_file: artifacts/data_preprocessing/kmeans_model_file.sav
+
+model_training:
+   root_dir: artifacts/model_training
+   preprocessed_model_input_file: artifacts/data_preprocessing/preprocessed_model_input_file.csv
+   cluster_label: Cluster
+   label_column_name: Good/Bad
+   models_directory: artifacts/model_training/models_directory

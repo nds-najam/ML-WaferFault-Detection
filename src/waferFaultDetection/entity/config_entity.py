@@ -28,3 +28,15 @@ class DataPreprocessingConfig:
     preprocessed_model_input_file: Path
     elbow_plot_file: Path
     kmeans_model_file: Path
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    '''
+    Define the resources required for the Model Training
+    such as dataset file name, label column name, null data summary, standard deviation summary etc.
+    '''
+    root_dir: Path
+    preprocessed_model_input_file: Path
+    cluster_label: str
+    label_column_name: str
+    models_directory: Path
